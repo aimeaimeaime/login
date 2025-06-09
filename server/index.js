@@ -41,4 +41,14 @@ app.post('/get-artists', async (req, res) => {
   res.status(200).json(data);
 });
 
+
+
+
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+  res.status(404).send('Page non trouvée');
+});
+
+
 app.listen(3000, () => console.log('✅ Server running on http://localhost:3000'));
