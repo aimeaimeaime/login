@@ -44,7 +44,7 @@ app.post('/get-artists', async (req, res) => {
 
 
 
-app.use(express.static('public'));
+
 
 app.get('*', (req, res) => {
   res.status(404).send('Page non trouvée');
